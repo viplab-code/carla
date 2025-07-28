@@ -4,11 +4,11 @@ for i in {1..1}
 do
     echo "=============================="
     echo "사이클 $i 시작"
-    ./CarlaUE4.sh -RenderOffScreen -nosound -quality-level=Low &
+    ../CarlaUE4.sh -RenderOffScreen -nosound -quality-level=Low &
     sleep 5
 
     echo "사이클 $i: 데이터 캡처 시작"
-    python ./PythonAPI/samples/run_capture_data.py
+    python samples/demo_show_image.py
     echo "사이클 $i: 데이터 캡처 완료"
 
     # kill Carla
